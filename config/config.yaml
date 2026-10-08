@@ -1,0 +1,21 @@
+# Konfigurasi Distributed Number Processing (2 PC)
+# Ubah nilai di sini, JANGAN hardcode di kode Python.
+
+network:
+  # Dipakai oleh worker (PC2) untuk bind/listen. 0.0.0.0 = semua interface.
+  worker_host: "0.0.0.0"
+  # Dipakai oleh master (PC1) untuk menghubungkan ke PC2.
+  # Isi dengan IP LAN PC2, misal 192.168.1.20. Untuk uji loopback pakai 127.0.0.1.
+  master_connect_host: "127.0.0.1"
+  port: 5050
+  timeout_seconds: 30
+
+data:
+  # Jumlah angka default bila tidak diberikan lewat CLI.
+  default_size: 1000000
+  # Seed generator data uji — tetap agar hasil reproducible.
+  seed: 42
+  # Ukuran data untuk benchmark otomatis (minimal 3).
+  benchmark_sizes: [100000, 1000000, 10000000]
+  # Rentang nilai angka random yang dibangkitkan [min, max] (inklusif).
+  value_range: [1, 1000000]

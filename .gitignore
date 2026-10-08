@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Config lokal / rahasia (sesuaikan bila perlu)
+config/config.local.yaml
+.env
+
+# OS & editor
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/
+*.swp
